@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <jmxConfigurator/>
+  <springProperty scope="context" name="LOG_PATH" source="logging.path"/>
+
+  <!-- CONSOLE 输出 -->
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+      <layout class="ch.qos.logback.classic.PatternLayout">
+         <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+         <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+      </layout>
+  </appender>
+
+  <!-- INFO 日志 -->
+  <appender name="FILEINFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <File>${LOG_PATH}/dataplatform-info.log</File>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${LOG_PATH}/%d{yyyy-MM-dd}/tmp-%d{yyyy-MM-dd}-%i.info.log.gz</fileNamePattern>
+      <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        <maxFileSize>1024MB</maxFileSize>
+      </timeBasedFileNamingAndTriggeringPolicy>
+      <maxHistory>10</maxHistory>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- ERROR 日志 -->
+  <appender name="FILEERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <File>${LOG_PATH}/dataplatform-error.log</File>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${LOG_PATH}/%d{yyyy-MM-dd}/tmp-%d{yyyy-MM-dd}-%i.error.log.gz
+      </fileNamePattern>
+      <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        <maxFileSize>1024MB</maxFileSize>
+      </timeBasedFileNamingAndTriggeringPolicy>
+      <maxHistory>10</maxHistory>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+    </encoder>
+    <filter class="ch.qos.logback.classic.filter.LevelFilter">
+        <level>ERROR</level>
+        <onMatch>ACCEPT</onMatch>
+        <onMismatch>DENY</onMismatch>
+    </filter>
+  </appender>
+
+  <!--ROOT-->
+  <root level="INFO">
+      <appender-ref ref="STDOUT"/>
+      <appender-ref ref="FILEINFO"/>
+      <appender-ref ref="FILEERROR"/>
+  </root>
+
+  <!--boot-->
+  <logger name="com.jzfq.rms.dataplatform" additivity="false" level="INFO">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="FILEINFO" />
+    <appender-ref ref="FILEERROR" />
+  </logger>
+
+  <!--spring-->
+  <logger name="org.springframework" additivity="false" level="INFO">
+     <appender-ref ref="STDOUT" />
+     <appender-ref ref="FILEINFO" />
+     <appender-ref ref="FILEERROR" />
+  </logger>
+
+  <!--netty-->
+  <logger name="io.netty" additivity="false" level="INFO">
+     <appender-ref ref="STDOUT" />
+     <appender-ref ref="FILEINFO" />
+     <appender-ref ref="FILEERROR" />
+  </logger>
+
+  <!--jboss-->
+  <logger name="org.jboss" additivity="false" level="INFO">
+     <appender-ref ref="STDOUT" />
+     <appender-ref ref="FILEINFO" />
+     <appender-ref ref="FILEERROR" />
+  </logger>
+
+  <!--mybatis-mybatis-->
+  <logger name="org.mybatis" additivity="false" level="INFO">
+     <appender-ref ref="STDOUT" />
+     <appender-ref ref="FILEINFO" />
+     <appender-ref ref="FILEERROR" />
+  </logger>
+
+  <!--dubbo-->
+  <logger name="com.alibaba" additivity="false" level="INFO">
+     <appender-ref ref="STDOUT" />
+     <appender-ref ref="FILEINFO" />
+     <appender-ref ref="FILEERROR" />
+  </logger>
+
+  <!--apache-->
+  <logger name="org.apache" additivity="false" level="INFO">
+     <appender-ref ref="STDOUT" />
+     <appender-ref ref="FILEINFO" />
+     <appender-ref ref="FILEERROR" />
+  </logger>
+
+  <!--sql-->
+  <logger name="com.jzfq.rms" additivity="false" level="DEBUG">
+    <appender-ref ref="STDOUT" />
+     <appender-ref ref="FILEINFO" />
+     <appender-ref ref="FILEERROR" />
+  </logger>
+
+</configuration>

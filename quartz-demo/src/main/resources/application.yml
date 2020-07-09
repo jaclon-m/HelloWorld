@@ -1,0 +1,41 @@
+spring:
+  quartz:
+    job-store-type: jdbc
+    properties:
+      org:
+        quartz:
+          scheduler:
+            instanceName: clusteredScheduler
+            instanceId: AUTO
+          jobStore:
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            tablePrefix: QRTZ_
+            isClustered: false
+            clusterCheckinInterval: 10000
+            useProperties: false
+            dataSource: qzDS
+          dataSource:
+            qzDS:
+              driver: com.mysql.cj.jdbc.Driver
+              URL: jdbc:mysql://localhost:3306/jaclon_test?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false
+              user: root
+              password: 123456
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 10
+            threadPriority: 5
+            threadsInheritContextClassLoaderOfInitializingThread: true
+  jdbc:
+    initialize-schema: always
+  datasource:
+    primarydatasource:
+      driverclassname: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/jaclon_test?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false
+      username: root
+      password: 123456
+server:
+  port: 8080
+logging:
+  level:
+    root: debug
