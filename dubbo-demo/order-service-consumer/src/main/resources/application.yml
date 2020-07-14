@@ -1,0 +1,13 @@
+server:
+  port: 9000
+
+dubbo:
+  application:
+    name: service-consumer
+  registry:
+    #address: zookeeper://127.0.0.1:2181
+    address: zookeeper://192.168.8.3:2181
+  metadata-report:
+    address: zookeeper://192.168.8.3:2181
+  monitor:
+    protocol: registry

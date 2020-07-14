@@ -13,8 +13,8 @@
         <module>redis</module>
         <module>mybatis-plus</module>
         <module>rocketmq-example</module>
-        <module>ali-call</module>
         <module>zookeeper</module>
+        <module>dubbo-demo</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
