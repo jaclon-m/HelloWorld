@@ -1,7 +1,7 @@
 package com.jaclon.dubbo.redis;
 
-import com.jaclon.dubbo.redis.r2.RedisKeyUtil;
-import com.jaclon.dubbo.redis.r2.RedisService;
+import com.jaclon.reids.redis.r2.RedisKeyUtil;
+import com.jaclon.reids.redis.r2.RedisService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

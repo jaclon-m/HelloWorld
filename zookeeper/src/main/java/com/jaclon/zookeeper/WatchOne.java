@@ -1,4 +1,4 @@
-package com.jaclon.dubbo;
+package com.jaclon.zookeeper;
 
 import org.apache.log4j.Logger;
 import org.apache.zookeeper.*;

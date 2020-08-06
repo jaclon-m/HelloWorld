@@ -1,4 +1,4 @@
-package com.jaclon.dubbo.redis.r1;
+package com.jaclon.reids.redis.r1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

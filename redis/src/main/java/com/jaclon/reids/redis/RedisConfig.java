@@ -1,4 +1,4 @@
-package com.jaclon.dubbo.redis;
+package com.jaclon.reids.redis;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
