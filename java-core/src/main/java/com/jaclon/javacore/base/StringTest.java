@@ -6,6 +6,7 @@ package com.jaclon.javacore.base;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.io.FileInputStream;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -26,7 +27,6 @@ public class StringTest {
         System.out.println(str+ "========" + s);
         //test3();*/
        test5();
-
     }
 
     public static void test5(){
