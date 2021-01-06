@@ -3,7 +3,7 @@
  * Copyright (c) 2019-2029 All Rights Reserved.
  */
 
-import com.jaclon.mybatisanalyse.bean.Blog;
+import com.jaclon.mybatis.analyse.bean.Blog;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
