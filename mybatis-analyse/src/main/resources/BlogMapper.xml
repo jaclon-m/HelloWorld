@@ -3,17 +3,17 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.jaclon.mybatisanalyse.bean.Blog">
+<mapper namespace="com.jaclon.mybatis.analyse.bean.Blog">
 
-    <select id="selectBlog" resultType="com.jaclon.mybatisanalyse.bean.Blog">
+    <select id="selectBlog" resultType="com.jaclon.mybatis.analyse.bean.Blog">
         select * from blog where id = #{id}
     </select>
 
-    <insert id="insertBlog" parameterType="com.jaclon.mybatisanalyse.bean.Blog">
+    <insert id="insertBlog" parameterType="com.jaclon.mybatis.analyse.bean.Blog">
         insert into blog (id,title) values (#{id},#{title})
     </insert>
 
-    <update id="updateBlog" parameterType="com.jaclon.mybatisanalyse.bean.Blog">
+    <update id="updateBlog" parameterType="com.jaclon.mybatis.analyse.bean.Blog">
         UPDATE blog SET title=#{title} WHERE id=#{id}
     </update>
 

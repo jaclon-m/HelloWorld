@@ -8,12 +8,12 @@
         <module>quartz-demo</module>
         <module>java-core</module>
         <module>message</module>
-        <module>bigdata</module>
         <module>validator</module>
         <module>redis</module>
         <module>mybatis-plus</module>
         <module>rocketmq-example</module>
         <module>zookeeper</module>
+        <module>spring-example</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -31,15 +31,24 @@
     </properties>
 
     <dependencies>
+        <!--spring boot start -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <!--<scope>test</scope>-->
         </dependency>
+        <!--springboot end-->
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -51,14 +60,5 @@
             <artifactId>joda-time</artifactId>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
