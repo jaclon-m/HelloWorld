@@ -25,7 +25,7 @@ public class HelloHandler implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("HelloHanler");
+        System.out.println("beofore HelloHanler");
         method.invoke(object,args);
         return null;
     }
