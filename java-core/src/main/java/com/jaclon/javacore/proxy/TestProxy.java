@@ -17,10 +17,22 @@ import java.lang.reflect.Proxy;
  */
 public class TestProxy {
     public static void main(String[] args) {
-        Hello hInterface = new HumanHello();
-        HelloHandler helloHandler = new HelloHandler(hInterface);
-        Hello hello = (Hello)Proxy.newProxyInstance(hInterface.getClass().getClassLoader(),hInterface.getClass().getInterfaces(),helloHandler);
+        System.getProperties().setProperty("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
+        test2();
+    }
+
+    public static void test1(){
+        Hello hHello = new HumanHello();
+        HelloHandler helloHandler = new HelloHandler(hHello);
+        Hello hello = (Hello)Proxy.newProxyInstance(hHello.getClass().getClassLoader(),hHello.getClass().getInterfaces(),helloHandler);
         //Hello hello = (Hello)Proxy.newProxyInstance(HumanHello.class.getClassLoader(),HumanHello.class.getInterfaces(),helloHandler);
         hello.morning("bob");
+    }
+
+    public static void test2(){
+        Printer printer = new Printer();
+        MyPrinterInvocationHandler handler = new MyPrinterInvocationHandler(printer);
+        IPrinter proxyPrinter = (IPrinter) Proxy.newProxyInstance(Printer.class.getClassLoader(), Printer.class.getInterfaces(), handler);
+        proxyPrinter.myPrint("proxy");
     }
 }

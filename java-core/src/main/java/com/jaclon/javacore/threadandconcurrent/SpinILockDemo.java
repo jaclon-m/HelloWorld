@@ -13,14 +13,14 @@ public class SpinILockDemo {
 
     public void mylock() {
         Thread thread = Thread.currentThread();
-        System.out.println(thread.getId() + "====mylock()");
         while (!atomicReference.compareAndSet(null, thread)) ;
+        System.out.println(thread.getId() + "====mylock()" + thread.getName());
     }
 
     public void myUnlock() {
         Thread thread = Thread.currentThread();
         atomicReference.compareAndSet(thread, null);
-        System.out.println(thread.getId() + "=======myUnlock()");
+        System.out.println(thread.getId() + "=======myUnlock()" + thread.getName());
     }
 
     public static void main(String[] args) throws InterruptedException {
