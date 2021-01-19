@@ -4,12 +4,16 @@
  */
 package com.jaclon.validator.controller;
 
+import com.jaclon.validator.entity.Person;
 import com.jaclon.validator.entity.SubmitRequestDetailInfo;
 import com.jaclon.validator.service.SubmitRequestDetailInfoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Constraint;
@@ -42,6 +46,12 @@ public class HelloController {
         SubmitRequestDetailInfo detailInfo = list.get(0);
         validate(detailInfo);
         return "Hello world";
+    }
+
+    @PostMapping("/response")
+    public String testError(@Validated @RequestBody Person person){
+        System.out.println(person);
+        return "success";
     }
 
     /**
