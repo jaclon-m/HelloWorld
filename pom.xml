@@ -14,6 +14,7 @@
         <module>rocketmq-example</module>
         <module>zookeeper</module>
         <module>spring-example</module>
+      <module>100-Mistakes-BusinessDev</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
