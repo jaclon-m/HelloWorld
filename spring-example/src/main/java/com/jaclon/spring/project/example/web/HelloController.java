@@ -1,6 +1,10 @@
 package com.jaclon.spring.project.example.web;
 
+import com.jaclon.spring.project.example.bean.Order;
 import com.jaclon.spring.project.example.bean.Person;
+import com.jaclon.spring.project.example.bean.User;
+import java.util.ArrayList;
+import java.util.List;
 import lombok.EqualsAndHashCode;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,9 +22,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
   @GetMapping("/hello")
-  public String HelloUrl(){
+  public User HelloUrl(){
     System.out.println("=============Hello World==============");
-    return "Hello World";
+    Order order = new Order("ll","x");
+    Order order2 = new Order("ll","xxx");
+    List<Order> list = new ArrayList<>();
+    list.add(order);
+    list.add(order2);
+    User user = new User();
+    user.setFirstName("ll");
+    user.setOrders(list);
+    return user;
   }
 
   @PostMapping("/mvc")

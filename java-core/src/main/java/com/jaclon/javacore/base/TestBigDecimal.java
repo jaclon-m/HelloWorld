@@ -17,8 +17,12 @@ import java.text.DecimalFormat;
 public class TestBigDecimal {
 
     public static void main(String[] args) {
-        int i = 100000000;
-        test1();
+        test3();
+    }
+    public static void test3(){
+        BigDecimal d = new BigDecimal(5L);
+        d.add(new BigDecimal(3L));
+        System.out.println("========" + d.toString());
     }
 
     public static  void test1(){

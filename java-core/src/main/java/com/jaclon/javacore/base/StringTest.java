@@ -26,9 +26,23 @@ public class StringTest {
         String s = StringUtils.replace(str,"1","A");
         System.out.println(str+ "========" + s);
         //test3();*/
-       test5();
+       test8();
     }
-
+    public static void test8(){
+        String s = StringUtils.joinWith(",", 1, 3, 6);
+        System.out.println("======" + s);
+    }
+    public static void test7(){
+        String str = null;
+        StringBuffer sb = new StringBuffer();
+        sb.append("dealId").append("_").append(str).append("_").append("12121");
+        System.out.println(sb);
+    }
+    public static void test6(){
+        String a = "";
+        String b = "";
+        System.out.println(a.equals(b));
+    }
     public static void test5(){
         String str = "hello";
         String str2 = "hello";
