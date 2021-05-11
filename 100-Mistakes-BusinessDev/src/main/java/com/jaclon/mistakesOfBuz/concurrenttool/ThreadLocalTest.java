@@ -1,4 +1,4 @@
-package com.jaclon.mistakesOfBuz.threadandconcurrent;
+package com.jaclon.mistakesOfBuz.concurrenttool;
 
 /**
  * TODO Description
