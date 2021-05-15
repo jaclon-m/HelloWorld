@@ -24,6 +24,13 @@
  * 要资源进行持续检测，并设置一半的使用量作为报警阈值，出现预警后及时扩容。
  *
  *
+ * 有了连接池之后，获取连接是从连接池获取，没有足够连接时连接池会创建连接。这
+ * 时，获取连接操作往往有两个超时时间：一个是从连接池获取连接的最长等待时间，通
+ * 常叫作请求超时 connectRequestTimeout 或等待超时 connectWaitTimeout；一个是
+ * 连接池新建 TCP 连接三次握手的连接超时，通常叫作连接超时 connectTimeout。针对
+ * JedisPool、Apache HttpClient 和 Hikari 数据库连接池，你知道如何设置这 2 个参数
+ * 吗？
+ *
  * @author jaclon
  * @date 2021/5/15
  */
