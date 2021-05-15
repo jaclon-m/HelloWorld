@@ -11,5 +11,15 @@
 
   <artifactId>100-Mistakes-BusinessDev</artifactId>
 
-
+  <dependencies>
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.9</version>
+    </dependency>
+  </dependencies>
 </project>
