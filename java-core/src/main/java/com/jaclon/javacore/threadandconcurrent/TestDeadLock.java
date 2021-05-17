@@ -1,18 +1,10 @@
 package com.jaclon.javacore.threadandconcurrent;
 
-import sun.misc.Unsafe;
-
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.Executors;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
 /**
  * @author jaclon
  * @date 2019/9/12
  */
-public class Test {
+public class TestDeadLock {
     public static String objA = "strA";
     public static String objB = "strB";
     public static void main(String[] args){
@@ -27,10 +19,10 @@ class Lock1 implements Runnable{
     public void run(){
         try{
             while(true){
-                synchronized(Test.objA){
+                synchronized(TestDeadLock.objA){
                     System.out.println("Lock1 lock strA");
                     Thread.sleep(3000);
-                    synchronized(Test.objB){
+                    synchronized(TestDeadLock.objB){
                         System.out.println("Lock1 lock strB");
                     }
                 }
@@ -45,10 +37,10 @@ class Lock2 implements Runnable{
     public void run(){
         try{
             while(true){
-                synchronized(Test.objB){
+                synchronized(TestDeadLock.objB){
                     System.out.println("Lock2 lock strB");
                     Thread.sleep(3000);
-                    synchronized(Test.objA){
+                    synchronized(TestDeadLock.objA){
                         System.out.println("Lock2 lock strA");
                     }
                 }
