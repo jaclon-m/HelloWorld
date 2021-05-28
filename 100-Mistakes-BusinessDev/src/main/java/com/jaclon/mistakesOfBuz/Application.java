@@ -17,9 +17,8 @@ import java.util.Properties;
 public class Application {
 
     public static void main(String[] args) {
-        //SpringApplication.run(Application.class,args);
         // httpinvoke
-        Utils.loadPropertySource(Application.class, "default.properties");
+//        Utils.loadPropertySource(Application.class, "default.properties");
         SpringApplication.run(Application.class, args);
     }
 

@@ -1,0 +1,4 @@
+
+curl -H "Content-Type:application/json" -X POST -d '{ "id":1, "name":null}' http://localhost:45678/pojonull/right
+
+{"id":1,"name":"","nickname":"guest","age":36,"createDate":"2020-01-04T11:09:20.000+0000"}%
