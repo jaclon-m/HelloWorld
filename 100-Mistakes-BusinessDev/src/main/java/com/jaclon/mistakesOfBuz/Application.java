@@ -19,6 +19,9 @@ public class Application {
     public static void main(String[] args) {
         // httpinvoke
 //        Utils.loadPropertySource(Application.class, "default.properties");
+
+        //log
+        System.setProperty("logging.config", "classpath:com/jaclon/mistakesOfBuz/log/loggerright.xml");
         SpringApplication.run(Application.class, args);
     }
 
