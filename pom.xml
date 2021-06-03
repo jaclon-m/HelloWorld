@@ -16,6 +16,7 @@
         <module>spring-example</module>
       <module>100-Mistakes-BusinessDev</module>
         <module>spring5</module>
+        <module>mongo-example</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
