@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * @author jaclon
  * @since 2021/6/8 12:04
  */
-@Configuration
+//@Configuration
 public class ObjectMapperConfig {
     //    @Bean
 //    public ObjectMapper objectMapper() {
