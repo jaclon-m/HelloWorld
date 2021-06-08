@@ -21,7 +21,7 @@ public class Application {
 //        Utils.loadPropertySource(Application.class, "default.properties");
 
         //log
-        System.setProperty("logging.config", "classpath:com/jaclon/mistakesOfBuz/log/loggerright.xml");
+        //System.setProperty("logging.config", "classpath:com/jaclon/mistakesOfBuz/log/loggerright.xml");
         SpringApplication.run(Application.class, args);
     }
 
