@@ -2,21 +2,26 @@ package com.jaclon.javacore.java8.Time;
 
 
 
+import org.apache.commons.lang3.time.DateUtils;
+
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
+import java.util.Date;
 import java.util.Set;
 
 public class TimeTest {
 
 
     public static void main(String[] args) {
-        try {
+        Date date = new Date();
+        System.out.println(date.toInstant().toString());
+       /* try {
             test8();
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
     public static void test8() throws InterruptedException {
