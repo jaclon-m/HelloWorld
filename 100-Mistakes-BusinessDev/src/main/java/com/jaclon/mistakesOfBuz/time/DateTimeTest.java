@@ -86,7 +86,6 @@ public class DateTimeTest {
      */
     private static void right() {
         System.out.println("right");
-
         String stringDate = "2020-01-02 22:00:00";
         ZoneId timeZoneSH = ZoneId.of("Asia/Shanghai");
         ZoneId timeZoneNY = ZoneId.of("America/New_York");
