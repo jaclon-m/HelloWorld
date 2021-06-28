@@ -29,10 +29,10 @@ public class RedisTemplateController {
     private StringRedisTemplate stringRedisTemplate;
     @Autowired
     private ObjectMapper objectMapper;
-    @Autowired
-    private RedisTemplate<String, User> userRedisTemplate;
-    @Autowired
-    private RedisTemplate<String, Long> countRedisTemplate;
+//    @Autowired
+//    private RedisTemplate<String, User> userRedisTemplate;
+//    @Autowired
+//    private RedisTemplate<String, Long> countRedisTemplate;
 
     @PostConstruct
     public void init() throws JsonProcessingException {
@@ -55,7 +55,7 @@ public class RedisTemplateController {
         log.info("stringRedisTemplate get {}", userFromStringRedisTemplate);
     }
 
-    @GetMapping("right2")
+    /*@GetMapping("right2")
     public void right2() {
         User user = new User("zhangsan", 30);
         userRedisTemplate.opsForValue().set(user.getName(), user);
@@ -63,5 +63,5 @@ public class RedisTemplateController {
         User userFromRedis = userRedisTemplate.opsForValue().get(user.getName());
         log.info("userRedisTemplate get {} {}", userFromRedis, userFromRedis.getClass());
         log.info("stringRedisTemplate get {}", stringRedisTemplate.opsForValue().get(user.getName()));
-    }
+    }*/
 }
