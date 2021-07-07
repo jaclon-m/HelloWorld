@@ -4,7 +4,7 @@ package com.jaclon.javacore;
 import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class Test {
+public class TestLRU {
     public static void main(String[] args) {
         LRUCache cache = new LRUCache( 2 );
         cache.put(1,1);
