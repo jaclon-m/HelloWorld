@@ -19,7 +19,8 @@ public class TestJson {
         person.setAge(12);
         person.setName("zss");
         System.out.println(JSON.toJSONString(person));
-        test();
+        System.out.println(person.toString());
+        test2();
     }
 
     public static void test(){
@@ -29,4 +30,11 @@ public class TestJson {
         list.add("1ss");
         System.out.println(JSONArray.toJSONString(list));
     }
+
+    public static void test2(){
+        String str = "{\"系统号\":\"23107119\",\"小明\":\"100\",\"小张\":\"80\",\"安琪拉\":\"87\",\"宫本\":\"30\",\"兰陵王\":\"70\"}";
+        System.out.println(str);
+        System.out.println(JSON.toJSONString(str));
+    }
+
 }

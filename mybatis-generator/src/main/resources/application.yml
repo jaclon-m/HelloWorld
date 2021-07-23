@@ -1,0 +1,16 @@
+#端口号配置
+server:
+  port: 8088
+spring:
+  #jdbc配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/mybatis-generator?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 12345678
+    driver-class-name: com.mysql.jdbc.Driver
+#mybatis配置
+mybatis:
+  #映射文件路径
+  mapper-locations: classpath:mapper/*.xml
+  #模型所在的保命
+  type-aliases-package: com.xyz.mybatis.entity

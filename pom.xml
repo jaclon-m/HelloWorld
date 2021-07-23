@@ -4,7 +4,6 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>mybatis-analyse</module>
         <module>quartz-demo</module>
         <module>java-core</module>
         <module>message</module>
@@ -17,6 +16,7 @@
       <module>100-Mistakes-BusinessDev</module>
         <module>spring5</module>
         <module>mongo-example</module>
+        <module>mybatis-generator</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
