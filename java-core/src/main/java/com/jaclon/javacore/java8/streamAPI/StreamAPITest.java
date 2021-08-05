@@ -1,11 +1,18 @@
 package com.jaclon.javacore.java8.streamAPI;
 
 
+import org.apache.commons.lang3.time.DateUtils;
+
+import java.text.ParseException;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamAPITest {
+
+    public static void main(String[] args) throws ParseException {
+        testX();
+    }
 
     //创建Stream
     public void test1(){
@@ -65,6 +72,18 @@ public class StreamAPITest {
 
     }
 
+    public static void testX() throws ParseException {
+        String str = "2021-07-12 00:00:00";
+        Date date1 = DateUtils.parseDate(str, "yyyy-MM-dd HH:mm:ss");
+        String str2 = "2021-08-12 00:00:00";
+        Date date2 = DateUtils.parseDate(str2, "yyyy-MM-dd HH:mm:ss");
+        ArrayList<Date> list = new ArrayList<>();
+        list.add(date1);
+        list.add(date2);
+        System.out.println("==============" + date1.after(new Date()));
+        System.out.println(date2 + "==============" + date2.after(new Date()));
+        list.stream().filter(x->x.after(new Date())).forEach(x -> System.out.println(x.toString()));
+    }
     //映射
     public  void test4(){
         /*map——接收 Lambda ， 将元素转换成其他形式或提取信息。
