@@ -75,12 +75,13 @@ public class StreamAPITest {
     public static void testX() throws ParseException {
         String str = "2021-07-12 00:00:00";
         Date date1 = DateUtils.parseDate(str, "yyyy-MM-dd HH:mm:ss");
-        String str2 = "2021-08-12 00:00:00";
+        String str2 = "2021-08-05 21:02:10";
         Date date2 = DateUtils.parseDate(str2, "yyyy-MM-dd HH:mm:ss");
         ArrayList<Date> list = new ArrayList<>();
         list.add(date1);
         list.add(date2);
         System.out.println("==============" + date1.after(new Date()));
+        System.out.println(date2 + "==============" + date2.before(new Date()));
         System.out.println(date2 + "==============" + date2.after(new Date()));
         list.stream().filter(x->x.after(new Date())).forEach(x -> System.out.println(x.toString()));
     }
