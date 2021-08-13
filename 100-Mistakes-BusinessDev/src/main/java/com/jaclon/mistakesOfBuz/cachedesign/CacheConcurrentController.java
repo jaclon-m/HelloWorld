@@ -36,7 +36,7 @@ public class CacheConcurrentController {
     @Autowired
     private RedissonClient redissonClient;
 
-    @PostConstruct
+//    @PostConstruct
     public void init() {
         stringRedisTemplate.opsForValue().set("hotspot", getExpensiveData(), 5, TimeUnit.SECONDS);
         Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(() -> {

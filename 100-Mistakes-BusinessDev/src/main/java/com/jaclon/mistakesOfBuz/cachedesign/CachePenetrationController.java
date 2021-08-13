@@ -34,7 +34,7 @@ public class CachePenetrationController {
     private AtomicInteger atomicInteger = new AtomicInteger();
     private BloomFilter<Integer> bloomFilter;
 
-    @PostConstruct
+    //@PostConstruct
     public void init() {
         Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(() -> {
             log.info("DB QPS : {}", atomicInteger.getAndSet(0));
