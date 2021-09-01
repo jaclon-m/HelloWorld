@@ -17,6 +17,9 @@
         <module>spring5</module>
         <module>mongo-example</module>
         <module>kafka-demo</module>
+        <module>netty-io-demo</module>
+        <module>concurrent-demo</module>
+        <module>java8-demo</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
