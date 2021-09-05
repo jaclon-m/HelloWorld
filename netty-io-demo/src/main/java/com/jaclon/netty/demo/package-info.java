@@ -5,6 +5,7 @@
  * 它的特点是先由操作系统完成后才通知服务端程序启动线程去处理，一般适用于连接数较多且连接时间较长的应用
  * 目前 AIO 还没有广泛应用，Netty 也是基于 NIO，而不是 AIO，因此我们就不详解 AIO 了，有兴趣的同学可以参考《Java新一代网络编程模型AIO原理及Linux系统AIO介绍》
  *
+ * 代码 https://github.com/dongzl/netty-handbook
  * @author jaclon
  * @since 2021/9/1 18:40
  */
