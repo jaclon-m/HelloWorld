@@ -25,7 +25,7 @@ public class ScatteringAndGatheringTest {
         byteBuffers[1] = ByteBuffer.allocate(3);
 
         SocketChannel socketChannel = serverSocketChannel.accept();
-
+        //假定从客户端接收 8 个字节
         int messageLength = 8;
 
         while (true){
@@ -34,6 +34,7 @@ public class ScatteringAndGatheringTest {
                 long l = socketChannel.read(byteBuffers);
                 byteRead += l;
                 System.out.println("byteRead: " + byteRead);
+                //使用流打印,看看当前的这个 buffer 的 position 和 limit
                 Arrays.asList(byteBuffers).stream().map(buffer -> "position = " + buffer.position() + ", limit = " + buffer.limit())
                         .forEach(System.out::println);
             }
@@ -42,10 +43,10 @@ public class ScatteringAndGatheringTest {
             Arrays.asList(byteBuffers).forEach(buffer -> buffer.flip());
 
             //将数据读出显示到客户端
-            long byteWirte = 0;
-            while (byteWirte < messageLength) {
+            long byteWrite = 0;
+            while (byteWrite < messageLength) {
                 long l = socketChannel.write(byteBuffers);
-                byteWirte += l;
+                byteWrite += l;
             }
 
             //将所有的buffer进行clear
@@ -53,7 +54,7 @@ public class ScatteringAndGatheringTest {
                 buffer.clear();
             });
 
-            System.out.println("byteRead = " + byteRead + ", byteWrite = " + byteWirte + ", messageLength = " + messageLength);
+            System.out.println("byteRead = " + byteRead + ", byteWrite = " + byteWrite + ", messageLength = " + messageLength);
         }
     }
 }
