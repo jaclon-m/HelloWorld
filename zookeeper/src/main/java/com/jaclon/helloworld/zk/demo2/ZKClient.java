@@ -38,6 +38,10 @@ public class ZKClient {
         System.out.println(serverList);
     }
 
+    /**
+     * 永久监听的注册方式
+     * @throws Exception
+     */
     public void getConnection() throws Exception{
         zkCli = new ZooKeeper(connectionUrl, sessionTimeOut, watchedEvent -> {
             List<String> children;
