@@ -1,7 +1,5 @@
-package com.jaclon.dubbo.thread;
+package com.jaclon.concurrent.temp;
 
-import com.jaclon.javacore.threadandconcurrent.AsyncApplicationWithAnnotation;
-import com.jaclon.javacore.threadandconcurrent.AsyncDemo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +9,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
+import static org.junit.Assert.*;
 
+/**
+ * TODO Description
+ *
+ * @author jaclon
+ * @since 2022/3/15 11:25
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes= AsyncApplicationWithAnnotation.class)
 public class AsyncApplicationWithAnnotationTest {

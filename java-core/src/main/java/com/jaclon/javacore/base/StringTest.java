@@ -7,7 +7,10 @@ package com.jaclon.javacore.base;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.FileInputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -26,7 +29,33 @@ public class StringTest {
         String s = StringUtils.replace(str,"1","A");
         System.out.println(str+ "========" + s);
         //test3();*/
-       test8();
+        System.out.println("==========");
+        System.out.println(test9());
+    }
+
+    public static String test9(){
+        String startDate = "2022-03-15 10:55:01";
+        String endDate = "2022-03-15 10:53:56";
+        try {
+            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            Date now = df.parse(endDate);
+            Date before = df.parse(startDate);
+
+            long l = now.getTime() - before.getTime();
+            long day = l/(24*60*60*1000);
+            long hour = (l/(60*60*1000) - day*24);
+            long min = ((l/(60*1000)) - day*24*60 - hour*60);
+            long s = (l/1000 - day*24*60*60 - hour*60*60 - min*60);
+
+            String shour = hour < 10 ? "0" + hour : hour + "";
+            String smin = min < 10 ? "0" + min : min + "";
+            String ss = s < 10 ? "0" + s : s + "";
+
+            return day < 1 ? shour + ":" + smin + ":" + ss : day + " days " + shour + ":" + smin + ":" + ss;
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return "";
     }
     public static void test8(){
         String s = StringUtils.joinWith(",", 1, 3, 6);
