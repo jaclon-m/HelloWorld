@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -30,9 +31,31 @@ public class StringTest {
         System.out.println(str+ "========" + s);
         //test3();*/
         System.out.println("==========");
-        System.out.println(test9());
+        test11();
     }
 
+
+    public static void test11(){
+        try {
+            //String dateTime = "2022-06-22T02:38:25.713778Z";
+            String dateTime = "2022-06-22T02:38:25";
+            //SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'");
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+            formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+            Date date = formatter.parse(dateTime);
+            SimpleDateFormat formatter2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            System.out.println(formatter2.format(date));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public static void test10(){
+        String format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+        System.out.println(format);
+        String format2 = new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss").format(new Date());
+        System.out.println(format2);
+    }
     public static String test9(){
         String startDate = "2022-03-15 10:55:01";
         String endDate = "2022-03-15 10:53:56";
