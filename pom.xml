@@ -20,6 +20,8 @@
         <module>netty-io-demo</module>
         <module>concurrent-demo</module>
         <module>java8-demo</module>
+        <module>rabbitmq-example-productor</module>
+        <module>rabbitmq-example-consumer</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -28,9 +30,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.jaclon</groupId>
-    <artifactId>springboot-helloworld</artifactId>
+    <artifactId>helloworld</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-helloworld</name>
+    <name>helloworld</name>
     <description>基于springboot的Helloworld，用于各种测试</description>
     <properties>
         <java.version>1.8</java.version>
