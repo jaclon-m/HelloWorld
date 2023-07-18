@@ -4,6 +4,7 @@
  */
 package com.jaclon.javacore.base;
 
+import javafx.collections.transformation.SortedList;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.FileInputStream;
@@ -31,13 +32,40 @@ public class StringTest {
         System.out.println(str+ "========" + s);
         //test3();*/
         System.out.println("==========");
-        test11();
+        test13();
+    }
+    public static void test13(){
+        String str = "#@#111";
+        String[] split = str.split("#@#");
+        System.out.println(split.length);
+        System.out.println(split[0] + "=" + split[1]);
+    }
+    public static void test12(){
+        String str = "10.0.41.232192.168.122.1";
+        String stdOut="3#92.06#1#10.0.41.232 192.168.122.1";
+        stdOut.trim();
+        if (str!=null) {
+            Pattern p = Pattern.compile("\\s*|\t|\r|\n");
+            /*\n 回车(\u000a)
+            \t 水平制表符(\u0009)
+            \s 空格(\u0008)
+            \r 换行(\u000d)*/
+            Matcher m = p.matcher(str);
+            System.out.println( m.replaceAll(""));
+        }
     }
 
-
+    /**
+     * Reports any calls to String.replaceAll() or String.split() where the first argument is a single regex meta character argument.
+     * The regex meta characters are one of ".$|()[{^?*+\", and these have a special meaning in regular expressions.
+     * For example calling "ab.cd".replaceAll(".", "-") produces "-----", because the dot matches any character.
+     * Most likely the escaped variant "\\." was intended instead.
+     */
     public static void test11(){
         try {
-            //String dateTime = "2022-06-22T02:38:25.713778Z";
+            String dateTimes = "2022-06-22T02:38:25.713778Z";
+            String[] ds = dateTimes.split("\\.");
+            System.out.println("====="+ds[0]);
             String dateTime = "2022-06-22T02:38:25";
             //SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'");
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");

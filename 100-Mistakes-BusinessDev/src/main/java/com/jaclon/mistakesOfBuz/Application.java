@@ -24,7 +24,7 @@ public class Application {
         //System.setProperty("logging.config", "classpath:com/jaclon/mistakesOfBuz/log/loggerright.xml");
 
         // Micrometer监控
-        Utils.loadPropertySource(Application.class, "productionready/influxdb.properties");
+        //Utils.loadPropertySource(Application.class, "productionready/influxdb.properties");
         SpringApplication.run(Application.class, args);
     }
 
