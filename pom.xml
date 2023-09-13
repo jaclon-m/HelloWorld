@@ -22,6 +22,7 @@
         <module>java8-demo</module>
         <module>rabbitmq-example-productor</module>
         <module>rabbitmq-example-consumer</module>
+        <module>elasticsearch-demo</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
