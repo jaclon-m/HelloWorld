@@ -23,6 +23,7 @@
         <module>rabbitmq-example-productor</module>
         <module>rabbitmq-example-consumer</module>
         <module>elasticsearch-demo</module>
+        <module>java</module>
         <!--<module>elasticsearch2-demo</module>-->
     </modules>
     <parent>
