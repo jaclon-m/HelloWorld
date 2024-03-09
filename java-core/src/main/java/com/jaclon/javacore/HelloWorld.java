@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class HelloWorld {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         long[] arr = new long[n];
         for (int i = 0; i < n; i++) {
@@ -19,7 +19,8 @@ public class HelloWorld {
         Arrays.sort(arr);
         for(long i : arr){
             System.out.print(i + " ");
-        }
+        }*/
+        test3();
 
     }
 
@@ -44,8 +45,11 @@ public class HelloWorld {
         t.start();
     }
 
-    public void test3(){
-        Set<Integer> set = new HashSet<>();
-
+    public static void test3(){
+        List<Long> list = new ArrayList<>();
+        list.add(8L);
+        Long a = null;
+        list.add(a);
+        System.out.println("=====");
     }
 }
