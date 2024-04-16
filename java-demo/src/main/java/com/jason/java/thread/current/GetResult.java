@@ -4,7 +4,6 @@
  */
 package com.jason.java.thread.current;
 
-import com.jaclon.concurrent.base.Employee;
 import org.springframework.beans.BeanUtils;
 
 import java.util.concurrent.ExecutorService;

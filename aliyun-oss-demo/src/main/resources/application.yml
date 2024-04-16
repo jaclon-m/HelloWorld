@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: oss-example
+  cloud:
+    alicloud:
+      access-key: LTAI5tDf54jNc5QnmQ1mASJp
+      secret-key: FRoNz4Is7Jn8rkJsxVHHmqe5FNo5eM
+      oss:
+        endpoint: oss-cn-qingdao.aliyuncs.com
+server:
+  port: 18084
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -2,6 +2,9 @@ package com.jason.java.java8;
 
 import java.util.Objects;
 
+/**
+ * @author jaclon
+ */
 public class Employee {
 
     private Integer id;

@@ -5,7 +5,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>quartz-demo</module>
-        <module>java-core</module>
         <module>message</module>
         <module>validator</module>
         <module>redis</module>
@@ -18,12 +17,11 @@
         <module>mongo-example</module>
         <module>kafka-demo</module>
         <module>netty-io-demo</module>
-        <module>concurrent-demo</module>
-        <module>java8-demo</module>
+        <module>java-demo</module>
         <module>rabbitmq-example-productor</module>
         <module>rabbitmq-example-consumer</module>
         <module>elasticsearch-demo</module>
-        <module>java</module>
+        <module>aliyun-oss-demo</module>
         <!--<module>elasticsearch2-demo</module>-->
     </modules>
     <parent>

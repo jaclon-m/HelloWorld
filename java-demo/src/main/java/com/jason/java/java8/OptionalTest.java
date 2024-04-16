@@ -1,8 +1,6 @@
 package com.jason.java.java8;
 
 
-import com.jason.java.java8.Employee;
-
 import java.util.Optional;
 
 public class OptionalTest {
