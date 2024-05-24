@@ -1,4 +1,4 @@
-package com.jaclon.helloworld.elasticsearch.entity;
+package com.jaclon.helloworld.elasticsearch.bean;
 
 import org.elasticsearch.index.VersionType;
 import org.springframework.data.annotation.Persistent;

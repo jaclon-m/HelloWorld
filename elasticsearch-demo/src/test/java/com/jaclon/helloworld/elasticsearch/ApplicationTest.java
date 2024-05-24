@@ -1,8 +1,8 @@
 package com.jaclon.helloworld.elasticsearch;
 
 import com.alibaba.fastjson.JSON;
-import com.jaclon.helloworld.elasticsearch.entity.Account;
-import com.jaclon.helloworld.elasticsearch.entity.User;
+import com.jaclon.helloworld.elasticsearch.bean.Account;
+import com.jaclon.helloworld.elasticsearch.bean.User;
 import org.elasticsearch.action.get.GetRequest;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.index.IndexRequest;
@@ -12,11 +12,9 @@ import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.xcontent.XContentType;
-import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
-import org.elasticsearch.search.aggregations.Aggregation;
 import org.elasticsearch.search.aggregations.AggregationBuilders;
 import org.elasticsearch.search.aggregations.Aggregations;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
@@ -35,7 +33,6 @@ import java.io.IOException;
 import java.util.Map;
 
 import static com.jaclon.helloworld.elasticsearch.config.ElasticsearchConfig.COMMON_OPTIONS;
-import static org.junit.Assert.*;
 
 /**
  * TODO Description

@@ -1,6 +1,6 @@
 package com.jaclon.helloworld.elasticsearch.repository;
 
-import com.jaclon.helloworld.elasticsearch.entity.Product;
+import com.jaclon.helloworld.elasticsearch.bean.Product;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
 

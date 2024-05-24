@@ -1,6 +1,6 @@
 package com.jaclon.helloworld.elasticsearch.controller;
 
-import com.jaclon.helloworld.elasticsearch.entity.Blog;
+import com.jaclon.helloworld.elasticsearch.bean.Blog;
 import com.jaclon.helloworld.elasticsearch.repository.BlogRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

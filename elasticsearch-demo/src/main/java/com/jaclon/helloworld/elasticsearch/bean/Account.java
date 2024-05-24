@@ -1,4 +1,4 @@
-package com.jaclon.helloworld.elasticsearch.entity;
+package com.jaclon.helloworld.elasticsearch.bean;
 
 import lombok.Data;
 

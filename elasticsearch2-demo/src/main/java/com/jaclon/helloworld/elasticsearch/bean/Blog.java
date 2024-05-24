@@ -1,4 +1,4 @@
-package com.jaclon.helloworld.elasticsearch.entity;
+package com.jaclon.helloworld.elasticsearch.bean;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
