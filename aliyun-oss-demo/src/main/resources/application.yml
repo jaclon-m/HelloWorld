@@ -3,8 +3,8 @@ spring:
     name: oss-example
   cloud:
     alicloud:
-      access-key: LTAI5tDf54jNc5QnmQ1mASJp
-      secret-key: FRoNz4Is7Jn8rkJsxVHHmqe5FNo5eM
+      access-key: a
+      secret-key: a
       oss:
         endpoint: oss-cn-qingdao.aliyuncs.com
 server:
