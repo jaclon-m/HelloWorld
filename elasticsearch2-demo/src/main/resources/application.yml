@@ -3,6 +3,7 @@ spring:
     rest:
   #    username: elastic
   #    password: 123456
-      uris: http://10.205.192.31:9200
+      #uris: http://10.205.192.31:9200
+      uris: http://localhost:9200
       connection-timeout: 1000
       read-timeout: 1000
