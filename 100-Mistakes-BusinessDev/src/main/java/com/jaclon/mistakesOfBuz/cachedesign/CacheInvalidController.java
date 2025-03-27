@@ -30,7 +30,8 @@ import java.util.stream.IntStream;
 @RestController
 @RequestMapping("/cache/invalid")
 @Slf4j
-public class CacheInvalidController {
+public class
+CacheInvalidController {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
     private AtomicInteger atomicInteger = new AtomicInteger();

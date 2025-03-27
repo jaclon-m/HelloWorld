@@ -31,4 +31,20 @@ public class MyThreadPoolDemo {
         }
 
     }
+
+    public void test(){
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(2, 10, 10, TimeUnit.SECONDS, new LinkedBlockingQueue<>(10)
+                , new ThreadPoolExecutor.CallerRunsPolicy());
+        try {
+            for (int i = 0;i< 10;i++){
+                threadPoolExecutor.execute(()->{
+                    System.out.println(Thread.currentThread().getName());
+                });
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            threadPoolExecutor.shutdown();
+        }
+    }
 }
