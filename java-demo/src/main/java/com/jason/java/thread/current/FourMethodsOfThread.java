@@ -7,7 +7,7 @@ import java.util.concurrent.*;
  * @author jaclon
  * @date 2019/9/26
  */
-public class FourMethodsOfThread {
+public class    FourMethodsOfThread {
 
     public static void main(String[] args) {
         /*//1. 继承Thread
